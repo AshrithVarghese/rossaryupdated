@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLC Velappaya</title>
+    
+    <script src="./confetti.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-image: url('images/velappaya-church-mundur-thrissur-ib8ecau54c-250.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999; /* Make sure this value is higher than your website content */
+}
+
+        nav {
+            background: rgba(68, 140, 248, 0.685); /* Transparent navigation bar */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            color: rgba(121, 172, 248, 0.788);
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+        .logo img{
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            margin: 0;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        hr{
+            width: 50%;
+            height: 2px;
+            color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title h2{
+            color: white;
+        }
+
+        .box {
+            width: 300px;
+            height: 250px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #home p{
+            text-align: center;
+        }
+
+        #home h1,h2,h3{
+            color: #353535;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #home .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            width: 600px;
+            height: 50px;
+            border-color: rgba(68, 140, 248, 0.685);
+            border-radius: 10px;
+            border-width: 2px;
+            background-color: rgba(188, 215, 255, 0.788);
+        }
+
+        #home .box h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #home .box-all{
+            padding-top: 200px;
+            align-items: center;
+        }
+
+        #home .malayalam h2{
+            color: #111111;
+            -webkit-text-stroke-color: #ffffff;
+        }
+        #home .iframe{
+            padding-top: 10px;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            background-color: #dbdbdb; /* Background color for the footer */
+            color: #111111; /* Text color */
+            padding: 20px; /* Add some space inside the footer */
+        }
+
+        /* Style the footer content */
+        .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .footer-content a{
+        text-decoration: none;
+        color: #1600df;
+        }
+
+        /* Style the footer links */
+        .footer-content ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        }
+
+        .footer-content ul li {
+        margin-right: 20px;
+        }
+
+        .footer-content ul li:last-child {
+        margin-right: 0;
+        }
+
+        .footer-content ul li a {
+        text-decoration: none;
+        color: #111111;
+        font-weight: bold;
+        }
+
+        /* Style the footer text */
+        .footer-content p {
+        margin: 0;
+        }
+
+        @media screen and (max-width: 500px) {
+        body {
+            height: 100vh;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-image: url('images/velappaya-church-mundur-thrissur-ib8ecau54c-250.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        nav {
+            background: rgba(68, 140, 248, 0.685); /* Transparent navigation bar */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            color: rgba(121, 172, 248, 0.788);
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+        .logo img{
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            margin: 0;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        hr{
+            width: 50%;
+            height: 2px;
+            color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title h2{
+            color: white;
+        }
+
+        .box {
+            width: 300px;
+            height: 250px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #home p{
+            text-align: center;
+        }
+
+        #home h1,h2,h3{
+            color: #353535;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #home .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            width: 400px;
+            height: 50px;
+            border-color: rgba(68, 140, 248, 0.685);
+            border-radius: 10px;
+            border-width: 2px;
+            background-color: rgba(188, 215, 255, 0.788);
+        }
+
+        #home .box h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 1px;
+            font-size: 20px;
+        }
+
+        #home .box-all{
+            padding-top: 200px;
+        }
+
+        #home .malayalam h2{
+            color: #111111;
+        }
+        #home .iframe{
+            padding-top: 10px;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footer-content {
+            background-color: #dbdbdb; /* Background color for the footer */
+            color: #111111; /* Text color */
+            left: 0;
+            width: 100%;
+        }
+
+        /* Style the footer content */
+        .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        }
+        .footer-content a{
+        text-decoration: none;
+        color: #1600df;
+        }
+
+        /* Style the footer links */
+        .footer-content ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        }
+
+        .footer-content ul li {
+        margin-right: 20px;
+        }
+
+        .footer-content ul li a {
+        text-decoration: none;
+        color: #111111;
+        font-weight: bold;
+        }
+
+        /* Style the footer text */
+        .footer-content p {
+        margin: 0;
+        font-size: 13px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="confetti-container">
+        <script>
+            window.onload = startConfetti();
+        </script>
+    </div>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="data:image/jpeg;base64,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" alt="Logo" width="50" height="50">
+            </div>
+            <div class="title">
+                <h1>CLC Velappaya</h1>
+                <h2>St.Mary's Church, Velappaya</h2>
+            </div>
+            </div>
+        </nav>
+
+    <!-- Content Goes Here -->
+    <section id="home">
+
+        <div class="box-all">
+        <div class="box">
+            <h2 >"Blessed Mary" Target : 2,00,000</h2>
+        </div>
+        <div class="box">
+            <h2 >"Blessed Mary" Completed (in %) : <h1>100%</h1></h2>
+        </div>
+        <div class="box">
+            <h2 >"Blessed Mary" Completed (in counts) : <h1>2,00,000</h1></h2>
+        </div>
+        </div>
+        <br><br><br><br>
+        <hr>
+        <div class="malayalam">
+        <h2>എത്ര "നന്മ നിറഞ്ഞ മറിയം" ചൊല്ലി എന്ന് താഴെ രേഖപ്പെടുത്തുക</h2>
+        </div>
+        <div class="iframe">
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXKtpuvkfhabfdEKtCiROczMhbReBvJUf8mZEPRGtddlCI3Q/viewform?usp=sf_link" width="400px" height="500px" frameBorder="0"></iframe>
+        </div>
+    </section>
+
+
+    <footer class="footer-content">
+            <p>&copy; 2023-24 CLC VELAPPAYA</p>
+            <p>Developed by <a href="https://www.instagram.com/ashrith_alappat">TECHNOMAZE</a><br>All rights reserved. Unauthorized copying or reproduction of content on this website is prohibited.</p>
+    </footer>
+
+    
+    
+
+    
+</body>
+</html>
